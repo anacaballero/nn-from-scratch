@@ -1,13 +1,18 @@
-[**Please read the blog post that goes with this code!**](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
+# Neural Network Classifier — Non-linear Decision Boundaries
 
-### iPython notebook setup
+3-layer feedforward neural network for binary classification, built entirely from matrix operations. Demonstrates why neural networks outperform linear classifiers when decision boundaries are non-linear.
 
-```bash
-# Create and activate new virtual environment (optional)
-virtualenv venv
-source venv/bin/activate
-# Install requirements
-pip install -r requirements.txt
-# Start the notebook server
-jupyter notebook
-```
+## Problem
+
+Logistic regression produces a linear decision boundary and fails on data with curved or overlapping class regions. A shallow neural network with non-linear activations resolves this with a small number of parameters.
+
+## Implementation
+
+- **Architecture:** input → hidden layer (tanh activation) → output (softmax)
+- **Training:** gradient descent with configurable learning rate and iteration count
+- **Evaluation:** decision boundary visualization and accuracy comparison against logistic regression baseline
+- **Two implementations:** functional (`nn_from_scratch.py`) and class-based (`ann_classification.py`) — same model, different code organization
+
+## Stack
+
+`Python` `NumPy` `scikit-learn` `matplotlib`
